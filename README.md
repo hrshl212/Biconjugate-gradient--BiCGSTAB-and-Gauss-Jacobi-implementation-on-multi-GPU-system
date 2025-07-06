@@ -26,4 +26,5 @@ Where:
 ## 🛠️ How to Run
 
 ```bash
-python laplace_solver.py
+nvcc -c -o 2gpu_bicg.o 2gpu_bicg.cu
+mpicxx -o 2gpu_bicg 2gpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
