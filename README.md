@@ -23,4 +23,7 @@ Where:
 - `σ` controls the spread of the heat spot.
 
 ---
+## 🛠️ How to Run
 
+```bash
+python laplace_solver.py
