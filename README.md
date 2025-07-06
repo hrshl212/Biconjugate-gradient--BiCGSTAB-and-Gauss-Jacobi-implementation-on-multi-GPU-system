@@ -28,6 +28,7 @@ Where:
 ```bash
 nvcc -c -o 2gpu_bicg.o 2gpu_bicg.cu
 mpicxx -o 2gpu_bicg 2gpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
-
+```
+---
 ## Visualization
 Run animate_heat.py to generate the gif visualizing the evolution of u
