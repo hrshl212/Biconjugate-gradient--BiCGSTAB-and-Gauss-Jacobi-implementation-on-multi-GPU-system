@@ -12,4 +12,15 @@ in a 2D domain using the **BiCG and Jacobi iterative methods** with:
 - Iterative updates until **convergence** (residual < `1e-6`) or a maximum number of iterations.
 
 ---
+## 🌡️ Initial Condition
+
+We use a **centered Gaussian** as the initial distribution:
+
+u(x, y, t=0) = exp(-((x - x₀)² + (y - y₀)²) / (2σ²))
+
+Where:
+- `(x₀, y₀)` is the center of the domain,
+- `σ` controls the spread of the heat spot.
+
+---
 
