@@ -1,5 +1,5 @@
 # Biconjugate-gradient-and-Gauss-Jacobi-implementation-on-multi-GPU-system
-This repository contains implementation for Biconjugate gradient and Jacobi method for implicit solution of PDE (heat equation). Both the solvers are for multi-GPU configuration and were run on rockfish cluster at Johns Hopkins University.
+This repository contains implementation for Biconjugate gradient and Jacobi method for implicit solution of PDE (heat equation). Both the solvers are for multi-GPU configuration and were run on NVIDIA A100s in rockfish cluster at Johns Hopkins University.
 
 This project solves the **Laplace equation**:
 
