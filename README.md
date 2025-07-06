@@ -5,11 +5,7 @@ This project solves the **Laplace equation**:
 
 ∇²u = 0
 
-yaml
-Copy
-Edit
-
-in a 2D domain using the **Jacobi iterative method** with:
+in a 2D domain using the **BiCG and Jacobi iterative methods** with:
 
 - **Neumann boundary conditions** (zero normal derivative),
 - An **initial Gaussian heat spot** as the starting condition,
