@@ -1,21 +1,19 @@
 # Biconjugate-gradient-and-Gauss-Jacobi-implementation-on-multi-GPU-system
 This repository contains implementation for Biconjugate gradient and Jacobi methods for implicit solution of PDE (heat equation).
 
-This project solves the Laplace equation:
+This project solves the **Laplace equation**:
 
-∇
-2
-𝑢
-=
-0
-∇ 
-2
- u=0
-in a 2D domain using the Jacobi iterative method with:
+∇²u = 0
 
-Neumann boundary conditions (zero normal derivative),
+yaml
+Copy
+Edit
 
-An initial Gaussian heat spot as the starting condition,
+in a 2D domain using the **Jacobi iterative method** with:
 
-Iterative updates until convergence (residual < 1e-6) or a maximum number of iterations.
+- **Neumann boundary conditions** (zero normal derivative),
+- An **initial Gaussian heat spot** as the starting condition,
+- Iterative updates until **convergence** (residual < `1e-6`) or a maximum number of iterations.
+
+---
 
