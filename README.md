@@ -30,5 +30,9 @@ nvcc -c -o 2gpu_bicg.o 2gpu_bicg.cu
 mpicxx -o 2gpu_bicg 2gpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
 ```
 ---
+## Results
+For a matrix of size 128 x 128, the Gauss-Jacobi solver takes a time of 48.16 sec, whereas the bicg solver takes a time of 40.1 seconds. 
+
+---
 ## Visualization
 Run animate_heat.py to generate the gif visualizing the evolution of u
