@@ -34,7 +34,9 @@ mpicxx -o 2gpu_bicg 2gpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcu
 For a matrix of size 128 x 128, the Gauss-Jacobi solver takes a time of 48.16 sec, whereas the bicg solver takes a time of 40.1 seconds. 
 
 ![Gauss-Jacobi method](./temp_evolution_jacobi.gif)
-![Biconjugate gradient method](./temp_evolution_bicg.gif)
+*Gauss-Jacobi method*
+![Biconjugate gradient method](./temp_evolution_jacobi.gif)
+*Biconjugate gradient method*
 
 ---
 ## Visualization
