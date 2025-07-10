@@ -26,8 +26,8 @@ Where:
 ## 🛠️ How to Run
 
 ```bash
-nvcc -c -o 2gpu_bicg.o 2gpu_bicg.cu
-mpicxx -o 2gpu_bicg 2gpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
+nvcc -c -o multigpu_bicg.o multigpu_bicg.cu
+mpicxx -o multigpu_bicg multigpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
 ```
 ---
 ## Results
