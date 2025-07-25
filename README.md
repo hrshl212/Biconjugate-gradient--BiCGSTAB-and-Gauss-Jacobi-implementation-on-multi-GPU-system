@@ -30,6 +30,15 @@ nvcc -c -o multigpu_bicg.o multigpu_bicg.cu
 mpicxx -o multigpu_bicg multigpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
 ```
 ---
+## Some Implementation Details
+
+– The multi-GPU solvers are implemented by discretizing the domain among different GPUs
+and with one thread taking care of one grid point.
+– CUDA-aware MPI is utilized to communicate information between the GPUs in the ghost or halo region.
+– A mask is implemented to identify internal grid points, boundary points and ghost points (or halo region). This mask
+is utilized inside CUDA kernels to avoid if-statements (Warp divergence) thereby aiding in optimized kernel
+development.
+---
 ## Results
 For a discretization of size 128 x 128 grid points, the Gauss-Jacobi solver takes a time of 0.048 sec, whereas the bicg solver takes a time of 0.040 seconds for 1000 timesteps. For a discretization of size 1024 x 1024 grid points, the Jacobi solver takes a time of 6.05 sec, whereas the bicg solver takes a time of 0.82 seconds for 1000 timesteps.
 
