@@ -30,7 +30,7 @@ nvcc -c -o multigpu_bicg.o multigpu_bicg.cu
 mpicxx -o multigpu_bicg multigpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
 ```
 ---
-## Some Implementation Details
+## Implementation Details
 
 – The multi-GPU solvers are implemented by discretizing the domain among different GPUs
 and with one thread taking care of one grid point.
