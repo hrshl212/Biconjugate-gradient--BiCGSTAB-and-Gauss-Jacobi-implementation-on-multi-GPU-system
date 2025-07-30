@@ -29,6 +29,8 @@ Where:
 nvcc -c -o multigpu_bicg.o multigpu_bicg.cu
 mpicxx -o multigpu_bicg multigpu_bicg.o -I${CUDA_HOME}/include -L${CUDA_HOME}/lib64 -lcudart -lmpi -lpmix
 ```
+The jobscript file is used to submit the job on JHU's rockfish cluster
+
 ---
 ## Implementation Details
 
