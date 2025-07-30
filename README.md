@@ -43,7 +43,7 @@ development.
 
 ---
 ## Results
-For a discretization of size 128 x 128 grid points, the Gauss-Jacobi solver takes a time of 0.048 sec, the bicg solver takes a time of 0.040 sec, whereas the bicgstab solver takes a time of 0.48 seconds for 1000 timesteps. For a discretization of size 1024 x 1024 grid points, the Jacobi solver takes a time of 6.05 sec, the bicg solver takes a time of 0.82 sec, whereas the bicgstab solver takes a time of 0.58 sec for 1000 timesteps. This shows that for less grid points bicg performs better whereas for higher number of grid points bicgstab performs better. 
+For a discretization of size 128 × 128 grid points, the Gauss-Jacobi solver requires 0.44 seconds, the BiCG solver takes 0.49 seconds, and the BiCGSTAB solver takes 0.47 seconds to complete 1000 timesteps. In contrast, for a larger discretization of 1024 × 1024 grid points, the Gauss-Jacobi solver takes 6.05 seconds, the BiCG solver takes 0.82 seconds, and the BiCGSTAB solver completes the same number of timesteps in 0.58 seconds. These results indicate that for smaller grids, all three solvers perform comparably, with Gauss-Jacobi showing a slight advantage. However, for larger grids, the BiCGSTAB solver demonstrates a significant performance improvement over the others.
 
 <figure>
   <img src="./temp_evolution_jacobi.gif" alt="Gauss-Jacobi method"/>
