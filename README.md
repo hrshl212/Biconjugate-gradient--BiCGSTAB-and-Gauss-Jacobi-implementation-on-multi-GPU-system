@@ -37,7 +37,9 @@ The jobscript file is used to submit the job on JHU's rockfish cluster
 – The multi-GPU solvers are implemented by discretizing the domain among different GPUs
 and with one thread taking care of one grid point.
 
-– CUDA-aware MPI is utilized to communicate information between the GPUs in the ghost or halo region.
+- Each MPI rank manages 1 GPU
+
+– CUDA-aware MPI is utilized to communicate information between the GPUs in the ghost or halo region. This avoides unnecessary copies to host and enables direct communication between the GPUs.
 
 – A mask is implemented to identify internal grid points, boundary points and ghost points (or halo region). This mask
 is utilized inside CUDA kernels to avoid if-statements (Warp divergence) thereby aiding in optimized kernel
